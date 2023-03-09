@@ -1,0 +1,16 @@
+La momentul de fata:
+- bucket sortul: - trebuie reparat
+    -> merge cu n = 1000 si singur
+    -> il continui cu quick si pt n = 10 ^ 8 si max = 10 ^ 3 ii ia 11 sec
+- merge sortul:
+    -> merge bn pana la n = 10 ^ 6 = max
+    -> pt n = 10 ^ 8 si n = 10 ^ 3 dureaza vreo 40 de sec
+- quick sortul: - momentan mg cel mai bn :P
+    -> mg bn tare pana la n = 10 ^ 6 si max = 10 ^ 6
+    -> n = 10 ^ 8 si max = 10 ^ 3 in 15 sec (best so far)
+- shell sortul: 
+    -> pt max mare si n = 10 ^ 6 cateodata da fail
+    -> pt n = 10 ^ 8 pare sa nu mai vr sa mearga (o mers pt max = 10 ^ 3, dar a durat 80 de sec)
+- radix sortul: - best :D
+    -> mg ff bn pt pana la n = 10 ^ 6 si max = 10 ^ 6
+    -> pt n = 10 ^ 8 dureaza 36 de sec
