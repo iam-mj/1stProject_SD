@@ -26,7 +26,3 @@ def radix():
         #punem val din aux in lista
         for j in range(n):
             lista[j] = aux[j]
-
-citire()
-radix()
-afisare()

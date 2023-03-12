@@ -2,7 +2,7 @@ import time
 from generate import gen
 from mergesort import merge
 from bucketsort import bucket
-from quick2 import quick
+from quicksort import quick
 from radixsort import radix
 from shellsort import shell
 
