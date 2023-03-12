@@ -1,26 +1,5 @@
 #il implementam in baza 10 initial ca na atat se poate
 #il implementam si in bazele 2, 8 dar momentan atat
-n = 0
-nmax = 0
-b = 0
-lista = []
-
-def citire():
-    global n, b, nmax, lista
-    file_name = input("Dati numele fisierului test: ")
-    f = open(file_name);
-    n, nmax, b = [int(x) for x in f.readline().split()]
-    lista = [int(x) for x in f.readline().split()]
-    f.close()
-
-def afisare():
-    global n, lista
-    file_out = input("Dati fisierul de output: ")
-    g = open(file_out, "w")
-    for i in range(n):
-        g.write(str(lista[i]) + ' ')
-    g.close()
-
 def radix():
     global n, b, nmax, lista
     for i in range(1, len(str(nmax)) + 1): # in functie de a cata cifra de la final facem ordonarea
