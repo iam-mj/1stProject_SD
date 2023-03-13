@@ -9,7 +9,7 @@ from radixsort8 import radix8
 from shellsort import shell
 from countsort import count
 
-i = ""
+i = "1"
 f = open("tests.txt")
 g = open("rezultate" + i + ".txt", "w")
 nr_teste = int([x for x in f.readline().split()][2])
@@ -23,11 +23,14 @@ for i in range(nr_teste):
     teste.append(test)
 f.close()
 
+teste.append([10 ** 6, 10 ** 6])
+
 cnt = 0
 for test in teste:
     cnt += 1
     #generam numerele
     lista = gen(test[0], test[1])
+
     g.write("\n Testul " + str(cnt) + " N = " + str(test[0]) + " Max = " + str(test[1]) + ":")
     print("\n Testul " + str(cnt) + " N = " + str(test[0]) + " Max = " + str(test[1]), end = ':')
 
