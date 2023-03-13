@@ -36,37 +36,3 @@ def quicksort(lista, n):
 
 def quick(lista, n, nmax):
     return quicksort(lista, n)
-
-
-'''
-def quicksort(lista, st, dr):
-    if st < dr:
-        p = lista[st]
-        if st + 3 < dr:
-            p = mediana(lista, st)
-        vs = []
-        vd = []
-        pivoti = 0
-        for i in range(st, dr + 1):
-            if lista[i] < p:
-                vs.append(lista[i])
-            else:
-                if lista[i] == p:
-                    pivoti += 1
-                if lista[i] > p:
-                    vd.append(lista[i])
-        
-        lista1 = quicksort2(vs, 0, len(vs) - 1)
-        lista2 = quicksort2(vd, 0, len(vd) - 1)
-
-        lista1.extend([p for i in range(pivoti)])
-        lista1.extend(lista2)
-
-        return lista1
-    else:
-        return lista
-
-
-def quicksort2(lista, st, dr):
-    return quicksort(lista, st, dr)
-'''

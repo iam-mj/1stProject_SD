@@ -1,6 +1,6 @@
-import math
 from quicksort import quick
 from countsort import count
+from mergesort import merge
 
 def select(lista, n):
     for i in range(n - 1):
@@ -15,28 +15,26 @@ def bucket(lista, n, nmax):
         return select(lista, n)
     else:
         #alegem numarul de buckets
-        if nmax <= 64:
-            #daca avem multe nr mici folosim count
-            return count(lista, n, nmax)
-        else:
-            nr = 32
-            buckets = [[] for i in range(nr)]
-            maxs = [0 for i in range(nr)]
-            #punem numerele in buckets-urile potrivite
-            extra = 1
-            if nmax % 32 == 0:
-                extra = 0
-            for i in range(n):
-                key = lista[i] // ((nmax >> 5) + extra) #cand shiftam biti facem impartirea intreaga
-                if key == nr: #in cazul in care dam de maxim
-                    key = nr - 1
-                buckets[key].append(lista[i])
-                if(lista[i] > maxs[key]):
-                    maxs[key] = lista[i]
-            lista = []
-            #sortam buckets-urile
-            for i in range(nr):
-                bucket_sortat = quick(buckets[i], len(buckets[i]), maxs[i])
-                #bucket_sortat = bucket(buckets[i], len(buckets[i]), maxs[i])
-                lista.extend(bucket_sortat)
-            return lista
+        nr = 32
+        buckets = [[] for i in range(nr)]
+        maxs = [0 for i in range(nr)]
+        #punem numerele in buckets-urile potrivite
+        extra = 1
+        if nmax % 32 == 0:
+            extra = 0
+        for i in range(n):
+            key = lista[i] // ((nmax >> 5) + extra) #cand shiftam biti facem impartirea intreaga
+            if key == nr: #in cazul in care dam de maxim
+                key = nr - 1
+            buckets[key].append(lista[i])
+            if(lista[i] > maxs[key]):
+                maxs[key] = lista[i]
+        lista = []
+        #sortam buckets-urile
+        for i in range(nr):
+            if maxs[i] <= 10 ** 6:
+                bucket_sortat = count(buckets[i], len(buckets[i]), maxs[i])
+            else:
+                bucket_sortat = merge(buckets[i], len(buckets[i]), maxs[i])
+            lista.extend(bucket_sortat)
+        return lista

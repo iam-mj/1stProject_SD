@@ -5,16 +5,17 @@ from bucketsort import bucket
 from quicksort import quick
 from radixsort import radix
 from radixsort16 import radix16
+from radixsort8 import radix8
 from shellsort import shell
 from countsort import count
 
-
+i = "1"
 f = open("tests.txt")
-g = open("rezultate.txt", "w")
+g = open("rezultate" + i + ".txt", "w")
 nr_teste = int([x for x in f.readline().split()][2])
+sorts = [radix, radix16, radix8, shell, merge, bucket, count]
+ch_sorts = ["radix", "radix16", "radix8", "shell", "merge", "bucket", "count"]
 #teste - lista cu informatii despre testele noastre
-sorts = [bucket, radix, shell, merge, count, radix16]
-ch_sorts = ["bucket", "radix", "shell", "merge", "count", "radix16"]
 teste = []
 for i in range(nr_teste):
     test = [x for x in f.readline().split()]
@@ -22,15 +23,23 @@ for i in range(nr_teste):
     teste.append(test)
 f.close()
 
+teste.append([10 ** 6, 10 ** 6])
+
 cnt = 0
 for test in teste:
     cnt += 1
     #generam numerele
     lista = gen(test[0], test[1])
+
     g.write("\n Testul " + str(cnt) + " N = " + str(test[0]) + " Max = " + str(test[1]) + ":")
     print("\n Testul " + str(cnt) + " N = " + str(test[0]) + " Max = " + str(test[1]), end = ':')
 
+    timp_start_py = time.time()
     lista_py = sorted(lista)
+    timp_stop_py = time.time()
+
+    g.write("\n - a durat " + str(timp_stop_py - timp_start_py) + " cu algoritmul nativ din Python")
+    print("\n - a durat " + str(timp_stop_py - timp_start_py) + " cu algoritmul nativ din Python", end = '')
 
     cnt_ch = 0
     for sort in sorts:
