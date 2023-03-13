@@ -4,10 +4,11 @@ from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
 from radixsort import radix
+from radixsort16 import radix16
 from shellsort import shell
 
 
-f = open("teste2.txt")
+f = open("tests.txt")
 nr_teste = int([x for x in f.readline().split()][2])
 #teste - lista cu informatii despre testele noastre
 sorts = [bucket, radix, shell]
@@ -33,7 +34,7 @@ for test in teste:
         #myList = bucket(lista, test[0], test[1] - 1)
         #myList = merge(lista, 0, test[0] - 1)
         #myList = shell(lista, test[0])
-    myList = quick(lista, 0, test[0] - 1)
+    myList = radix16(lista, test[0], test[1] - 1)
         #myList = radix(lista, test[0], test[1] - 1)
     timp_stop = time.time()
 

@@ -4,6 +4,7 @@ from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
 from radixsort import radix
+from radixsort16 import radix16
 from shellsort import shell
 from countsort import count
 
@@ -12,8 +13,8 @@ f = open("tests.txt")
 g = open("rezultate.txt", "w")
 nr_teste = int([x for x in f.readline().split()][2])
 #teste - lista cu informatii despre testele noastre
-sorts = [bucket, radix, shell, merge, count]
-ch_sorts = ["bucket", "radix", "shell", "merge", "count"]
+sorts = [bucket, radix, shell, merge, count, radix16]
+ch_sorts = ["bucket", "radix", "shell", "merge", "count", "radix16"]
 teste = []
 for i in range(nr_teste):
     test = [x for x in f.readline().split()]
