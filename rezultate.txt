@@ -1,0 +1,22 @@
+
+ Testul 1 N = 1000 Max = 1000:
+ - a durat 0.003000497817993164 OK cu metoda bucket
+ - a durat 0.005008220672607422 OK cu metoda radix
+ - a durat 0.0030007362365722656 OK cu metoda shell
+ - a durat 0.0029959678649902344 OK cu metoda merge
+ - a durat 0.0009872913360595703 OK cu metoda count
+ - a durat 0.0019996166229248047 Failed =(( cu metoda radix16
+ Testul 2 N = 1000 Max = 10000:
+ - a durat 0.0020110607147216797 OK cu metoda bucket
+ - a durat 0.008993387222290039 OK cu metoda radix
+ - a durat 0.001007080078125 OK cu metoda shell
+ - a durat 0.0020105838775634766 OK cu metoda merge
+ - a durat 0.002003192901611328 OK cu metoda count
+ - a durat 0.002990245819091797 Failed =(( cu metoda radix16
+ Testul 3 N = 1000 Max = 1000000:
+ - a durat 0.001989126205444336 OK cu metoda bucket
+ - a durat 0.010982513427734375 OK cu metoda radix
+ - a durat 0.0009915828704833984 OK cu metoda shell
+ - a durat 0.002998828887939453 OK cu metoda merge
+ - a durat 0.23305130004882812 OK cu metoda count
+ - a durat 0.0030095577239990234 Failed =(( cu metoda radix16

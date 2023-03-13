@@ -1,22 +1,3 @@
-n = 0
-lista = []
-
-def citire():
-    global n, lista
-    file_name = input("Dati numele fisierului test: ")
-    f = open(file_name);
-    n = int(f.readline().strip())
-    lista = [int(x) for x in f.readline().split()]
-    f.close()
-
-def afisare():
-    global n, lista
-    file_out = input("Dati fisierul de output: ")
-    g = open(file_out, "w")
-    for i in range(n):
-        g.write(str(lista[i]) + ' ')
-    g.close()
-
 def interclasare(lista1, lista2):
     l1 = len(lista1) - 1
     l2 = len(lista2) - 1
@@ -38,10 +19,13 @@ def interclasare(lista1, lista2):
         j += 1
     return rez
 
-def merge(lista, st, dr):
+def merge(lista, n, nmax):
+    return mergesort(lista, 0, n - 1)
+
+def mergesort(lista, st, dr):
     if st < dr:
         mij = (st + dr) // 2
-        rez = interclasare(merge(lista, st, mij), merge(lista, mij + 1, dr))
+        rez = interclasare(mergesort(lista, st, mij), mergesort(lista, mij + 1, dr))
         return rez
     else:
         return [lista[st]]
