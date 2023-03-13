@@ -1,4 +1,4 @@
-#il implementam si in baza 16 
+# 8 e de fapt infinit =))
 
 #functia de transformare in alta baza
 def transf16(element):
@@ -6,8 +6,8 @@ def transf16(element):
     if element == 0:
         list = [0]
     while element:
-        list.append(element % 16)
-        element = element >> 4
+        list.append(element % (1 << 16)) #element % (2 ** 16) 
+        element = element >> 16
     return list #intoarce o lista cu cifrele numarului in noua baza dar de la final la inceput
 
 #functia de transformare inapoi in baza 10
@@ -19,11 +19,11 @@ def transf10(list, p): #alegem baza de forma 2 ** p
         el += list[i]
     return el
 
-def radix16(lista, n, nmax):
+def radix8(lista, n, nmax):
     imax = 0
     emax = max(lista) #maximul din lista
-    b = 16
-    p = 4
+    b = 1 << 16 #2 ** 16
+    p = 16
     for i in range(len(lista)):
         if lista[i] == emax:
             imax = i
