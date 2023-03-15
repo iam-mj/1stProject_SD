@@ -1,5 +1,6 @@
 import time
 from generate import gen
+from genTesteSpeciale import cresc, descresc, aproapeSortat, apropiat
 from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
@@ -9,28 +10,22 @@ from radixsort8 import radix8
 from shellsort import shell
 from countsort import count
 
-i = "3"
-f = open("tests.txt")
+i = "Speciale2"
 g = open("rezultate" + i + ".txt", "w")
-nr_teste = int([x for x in f.readline().split()][2])
 sorts = [radix, radix16, radix8, shell, merge, bucket, count]
 ch_sorts = ["radix", "radix16", "radix8", "shell", "merge", "bucket", "count"]
-#teste - lista cu informatii despre testele noastre
-teste = []
-for i in range(nr_teste):
-    test = [x for x in f.readline().split()]
-    test = [int(test[i]) for i in [2, 5]]
-    teste.append(test)
-f.close()
+testeSpeciale = [cresc, descresc, aproapeSortat, apropiat]
+ch_testeSpeciale = ["cresc", "descresc", "aproapeSortat", "apropiat"]
 
 cnt = 0
-for test in teste:
+for test in testeSpeciale:
     cnt += 1
     #generam numerele
-    lista = gen(test[0], test[1])
+    lista = test(10 ** 6, 10 ** 6)
     
-    g.write("\n Testul " + str(cnt) + " N = " + str(test[0]) + " Max = " + str(test[1]) + ":")
-    print("\n Testul " + str(cnt) + " N = " + str(test[0]) + " Max = " + str(test[1]), end = ':')
+    g.write("\n Testul " + ch_testeSpeciale[cnt - 1] + " N = 1000000" + " Max = 1000000" + ":")
+    print("\n Testul " + ch_testeSpeciale[cnt - 1] + " N = 1000000" + " Max = 1000000", end = ':')
+
 
     timp_start_py = time.time()
     lista_py = sorted(lista)
@@ -42,7 +37,7 @@ for test in teste:
     cnt_ch = 0
     for sort in sorts:
         timp_start = time.time()
-        myList = sort(lista, test[0], test[1] - 1)
+        myList = sort(lista, 10 ** 6, 10 ** 6)
         timp_stop = time.time()
 
         if lista_py == myList:
