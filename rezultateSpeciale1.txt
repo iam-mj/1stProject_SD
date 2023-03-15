@@ -1,0 +1,37 @@
+
+ Testul cresc N = 1000000 Max = 1000000:
+ - a durat 0.022022485733032227 cu algoritmul nativ din Python
+ - a durat 11.720966100692749 OK cu metoda radix
+ - a durat 4.63711953163147 OK cu metoda radix16
+ - a durat 2.0213403701782227 OK cu metoda radix8
+ - a durat 1.727952003479004 OK cu metoda shell
+ - a durat 2.3021786212921143 OK cu metoda merge
+ - a durat 2.7449698448181152 OK cu metoda bucket
+ - a durat 0.2877047061920166 OK cu metoda count
+ Testul descresc N = 1000000 Max = 1000000:
+ - a durat 0.019576311111450195 cu algoritmul nativ din Python
+ - a durat 7.950903415679932 OK cu metoda radix
+ - a durat 4.620915174484253 OK cu metoda radix16
+ - a durat 1.9908814430236816 OK cu metoda radix8
+ - a durat 1.7502315044403076 OK cu metoda shell
+ - a durat 2.276937961578369 OK cu metoda merge
+ - a durat 2.758070468902588 OK cu metoda bucket
+ - a durat 0.2941291332244873 OK cu metoda count
+ Testul aproapeSortat N = 1000000 Max = 1000000:
+ - a durat 0.023599624633789062 cu algoritmul nativ din Python
+ - a durat 7.914380073547363 OK cu metoda radix
+ - a durat 4.743106365203857 OK cu metoda radix16
+ - a durat 1.9689819812774658 OK cu metoda radix8
+ - a durat 1.782850742340088 OK cu metoda shell
+ - a durat 2.300858974456787 OK cu metoda merge
+ - a durat 2.688725709915161 OK cu metoda bucket
+ - a durat 0.2917027473449707 OK cu metoda count
+ Testul apropiat N = 1000000 Max = 1000000:
+ - a durat 0.15317225456237793 cu algoritmul nativ din Python
+ - a durat 9.196597576141357 OK cu metoda radix
+ - a durat 4.016989469528198 OK cu metoda radix16
+ - a durat 2.1858789920806885 OK cu metoda radix8
+ - a durat 1.772881269454956 OK cu metoda shell
+ - a durat 2.352722406387329 OK cu metoda merge
+ - a durat 0.41637754440307617 OK cu metoda bucket
+ - a durat 0.24015331268310547 OK cu metoda count
