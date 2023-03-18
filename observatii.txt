@@ -1,12 +1,14 @@
 #mi-am dat seama ca testam cu n = 10^7 in loc de 10^8 :|
 La momentul de fata:
 - bucket sortul:
+    -> implementare??
     -> merge cu n = 1000 si singur
     -> il continui cu quick si pt n = 10 ^ 8 si max = 10 ^ 3 ii ia ?? sec
 - merge sortul:
     -> merge bn pana la n = 10 ^ 6 = max
     -> pt n = 10 ^ 8 si n = 10 ^ 3 dureaza vreo ?? de sec 
 - quick sortul: - imi da un recursion error pe care nu ma descurc sa o rezolv
+    -> repara mediana din 5 ca nu o faci ca lumea
     -> mg bn pt n = 1000 si cam atat =(((
     -> mg doar daca il testez individual, altfel mi se umple memoria
 - shell sortul: 
@@ -14,6 +16,7 @@ La momentul de fata:
 - radix sortul:
     -> mg ff bn pt pana la n = 10 ^ 6 si max = 10 ^ 6
     -> pt n = 10 ^ 8 dureaza 10 minuuuuute =((((
+    -> implementare?????
 - radix sortul in baza 16:
     -> mg de vreo 2 ori mai repede
 - radix sortul in baza 2 ** 16:

@@ -1,0 +1,41 @@
+
+ Testul cresc N = 1000000 Max = 1000000:
+ - a durat 0.02065253257751465 cu algoritmul nativ din Python
+ - a durat 4.152712821960449 OK cu metoda radix
+ - a durat 3.415621519088745 OK cu metoda radix4
+ - a durat 1.8823535442352295 OK cu metoda radix8
+ - a durat 0.8120784759521484 OK cu metoda radix16
+ - a durat 1.9260532855987549 OK cu metoda shell
+ - a durat 2.322791337966919 OK cu metoda merge
+ - a durat 2.8156890869140625 OK cu metoda bucket
+ - a durat 0.3023543357849121 OK cu metoda count
+ Testul descresc N = 1000000 Max = 1000000:
+ - a durat 0.021271467208862305 cu algoritmul nativ din Python
+ - a durat 2.612973928451538 OK cu metoda radix
+ - a durat 2.2850213050842285 OK cu metoda radix4
+ - a durat 1.3303203582763672 OK cu metoda radix8
+ - a durat 0.8356602191925049 OK cu metoda radix16
+ - a durat 2.2284538745880127 OK cu metoda shell
+ - a durat 2.3359310626983643 OK cu metoda merge
+ - a durat 2.7917640209198 OK cu metoda bucket
+ - a durat 0.29710984230041504 OK cu metoda count
+ Testul aproapeSortat N = 1000000 Max = 1000000:
+ - a durat 0.026114463806152344 cu algoritmul nativ din Python
+ - a durat 2.596083879470825 OK cu metoda radix
+ - a durat 2.246070623397827 OK cu metoda radix4
+ - a durat 1.2224204540252686 OK cu metoda radix8
+ - a durat 0.8392102718353271 OK cu metoda radix16
+ - a durat 1.8380274772644043 OK cu metoda shell
+ - a durat 2.4332423210144043 OK cu metoda merge
+ - a durat 2.744048595428467 OK cu metoda bucket
+ - a durat 0.29918670654296875 OK cu metoda count
+ Testul apropiat N = 1000000 Max = 1000000:
+ - a durat 0.1636495590209961 cu algoritmul nativ din Python
+ - a durat 3.929046630859375 OK cu metoda radix
+ - a durat 3.4832088947296143 OK cu metoda radix4
+ - a durat 2.040822982788086 OK cu metoda radix8
+ - a durat 1.4171042442321777 OK cu metoda radix16
+ - a durat 3.610769510269165 OK cu metoda shell
+ - a durat 3.359807014465332 OK cu metoda merge
+ - a durat 0.6593844890594482 OK cu metoda bucket
+ - a durat 0.3568553924560547 OK cu metoda count

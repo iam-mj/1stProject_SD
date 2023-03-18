@@ -1,7 +1,7 @@
-#il implementam in baza 2 ** 8 
-def radix8(lista, n, nmax):
-    b = 2 ** 8
-    putere = 8 #baza e 2 ** putere
+#il implementam in baza 16
+def radix4(lista, n, nmax):
+    b = 16
+    putere = 4 #baza e 2 ** putere
     putereActuala = 0 #p e 2 ** putereActuala
     maxim = max(lista)
     p = 1 #puterea la baza la care urmeaza sa impartim pt a obtine usor cifra necesara
