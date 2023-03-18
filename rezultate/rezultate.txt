@@ -1,0 +1,81 @@
+
+ Testul 1 N = 1000 Max = 1000:
+ - a durat 0.0 cu algoritmul nativ din Python
+ - a durat 0.0 OK cu metoda radix
+ - a durat 0.0010066032409667969 OK cu metoda radix4
+ - a durat 0.0 OK cu metoda radix8
+ - a durat 0.008434057235717773 OK cu metoda radix16
+ - a durat 0.002166748046875 OK cu metoda shell
+ - a durat 0.0010209083557128906 OK cu metoda merge
+ - a durat 0.0021665096282958984 OK cu metoda bucket
+ - a durat 0.0 OK cu metoda count
+ Testul 2 N = 1000 Max = 100000:
+ - a durat 0.0 cu algoritmul nativ din Python
+ - a durat 0.001998424530029297 OK cu metoda radix
+ - a durat 0.0009999275207519531 OK cu metoda radix4
+ - a durat 0.001024007797241211 OK cu metoda radix8
+ - a durat 0.016565561294555664 OK cu metoda radix16
+ - a durat 0.001016855239868164 OK cu metoda shell
+ - a durat 0.0030138492584228516 OK cu metoda merge
+ - a durat 0.2133316993713379 OK cu metoda bucket
+ - a durat 0.015961170196533203 OK cu metoda count
+ Testul 3 N = 1000 Max = 10000000:
+ - a durat 0.0 cu algoritmul nativ din Python
+ - a durat 0.0030117034912109375 OK cu metoda radix
+ - a durat 0.0030014514923095703 OK cu metoda radix4
+ - a durat 0.002001523971557617 OK cu metoda radix8
+ - a durat 0.01737236976623535 OK cu metoda radix16
+ - a durat 0.0 OK cu metoda shell
+ - a durat 0.001999378204345703 OK cu metoda merge
+ - a durat 0.25167226791381836 OK cu metoda bucket
+ - a durat 1.3773951530456543 OK cu metoda count
+ Testul 4 N = 1000000 Max = 1000:
+ - a durat 0.1357276439666748 cu algoritmul nativ din Python
+ - a durat 1.2572729587554932 OK cu metoda radix
+ - a durat 1.772500991821289 OK cu metoda radix4
+ - a durat 1.1901140213012695 OK cu metoda radix8
+ - a durat 0.6050546169281006 OK cu metoda radix16
+ - a durat 2.885237455368042 OK cu metoda shell
+ - a durat 2.9187374114990234 OK cu metoda merge
+ - a durat 0.40971875190734863 OK cu metoda bucket
+ - a durat 0.1683664321899414 OK cu metoda count
+ Testul 5 N = 1000000 Max = 1000000:
+ - a durat 0.2921581268310547 cu algoritmul nativ din Python
+ - a durat 3.310115098953247 OK cu metoda radix
+ - a durat 3.385033369064331 OK cu metoda radix4
+ - a durat 2.1212685108184814 OK cu metoda radix8
+ - a durat 1.4675440788269043 OK cu metoda radix16
+ - a durat 3.4564383029937744 OK cu metoda shell
+ - a durat 3.258917808532715 OK cu metoda merge
+ - a durat 2.8268678188323975 OK cu metoda bucket
+ - a durat 0.36591458320617676 OK cu metoda count
+ Testul 6 N = 1000000 Max = 100000000:
+ - a durat 0.3059964179992676 cu algoritmul nativ din Python
+ - a durat 4.58305549621582 OK cu metoda radix
+ - a durat 4.723600387573242 OK cu metoda radix4
+ - a durat 2.8098700046539307 OK cu metoda radix8
+ - a durat 1.6730873584747314 OK cu metoda radix16
+ - a durat 3.4333009719848633 OK cu metoda shell
+ - a durat 3.2161571979522705 OK cu metoda merge
+ - a durat 2.455622673034668 OK cu metoda bucket
+ - a durat 14.036551475524902 OK cu metoda count
+ Testul 7 N = 100000000 Max = 1000:
+ - a durat 13.922151565551758 cu algoritmul nativ din Python
+ - a durat 131.8612835407257 OK cu metoda radix
+ - a durat 193.91562151908875 OK cu metoda radix4
+ - a durat 130.30423545837402 OK cu metoda radix8
+ - a durat 65.03910279273987 OK cu metoda radix16
+ - a durat 651.9908394813538 OK cu metoda shell
+ - a durat 428.32954597473145 OK cu metoda merge
+ - a durat 45.90043902397156 OK cu metoda bucket
+ - a durat 17.388113737106323 OK cu metoda count
+ Testul 8 N = 100000000 Max = 10000:
+ - a durat 26.748955965042114 cu algoritmul nativ din Python
+ - a durat 218.54607009887695 OK cu metoda radix
+ - a durat 390.5656952857971 OK cu metoda radix4
+ - a durat 199.39024472236633 OK cu metoda radix8
+ - a durat 102.97952723503113 OK cu metoda radix16
+ - a durat 745.1358692646027 OK cu metoda shell
+ - a durat 620.9191148281097 OK cu metoda merge
+ - a durat 71.6811056137085 OK cu metoda bucket
+ - a durat 27.601776599884033 OK cu metoda count

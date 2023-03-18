@@ -1,63 +1,31 @@
-#il implementam si in baza 16 
-
-#functia de transformare in alta baza
-def transf16(element):
-    list = []
-    if element == 0:
-        list = [0]
-    while element:
-        list.append(element % 16)
-        element = element >> 4
-    return list #intoarce o lista cu cifrele numarului in noua baza dar de la final la inceput
-
-#functia de transformare inapoi in baza 10
-def transf10(list, p): #alegem baza de forma 2 ** p
-    list = list[::-1] #numarul era stocat de la dreapta la stanga
-    el = 0
-    for i in range(len(list)):
-        el = el << p
-        el += list[i]
-    return el
-
+#il implementam in baza 2 ** 16 
 def radix16(lista, n, nmax):
-    imax = 0
-    emax = max(lista) #maximul din lista
-    b = 16
-    p = 4
-    for i in range(len(lista)):
-        if lista[i] == emax:
-            imax = i
-        lista[i] = transf16(lista[i])
-        #fiecare element are intr-o lista "cifrele" din care e format in baza respectiva 
-    for i in range(0, len(lista[imax])): 
-    #in functie de a cata cifra de la final facem ordonarea (consideram ultima cifra ca fiind cifra 0)
-    #numerele noastre oricum is trecute de la dreapta la stanga in lista dar anywaysss
-        aux = [0 for j in range(n)]
-        fr = [0 for j in range(b)]
+    b = 2 ** 16
+    putere = 16 #baza e 2 ** putere
+    putereActuala = 0 #p e 2 ** putereActuala
+    maxim = max(lista)
+    p = 1 #puterea la baza la care urmeaza sa impartim pt a obtine usor cifra necesara
+    while(maxim / p >= 1):
+        aux = [0 for j in range(n)] #lista in care sortam numerele
+        fr = [0 for i in range(b)] #lista in care pastram frecventele
         for j in range(n):
-            cif = 0
-            l = len(lista[j])#cate cifre are numarul
-            if l > i:
-                cif = lista[j][i]
-            fr[cif] += 1 #crestem frecventa acordingly
-        for j in range(b): #modificam vectorul de frecventa pt a ne da pozitiile
+            cif = (lista[j] >> putereActuala) & (b - 1) #& (b - 1) <=> % b
+            fr[cif] += 1
+        #actualizam fr astfel incat sa ne dea pozitiile elementelor in aux
+        for j in range(b):
             if j == 0:
-                fr[j] += -1 #la fr[0] scadem 1 fiindca aux e indexat de la 0
+                fr[j] += -1
             else:
                 fr[j] += fr[j - 1]
-        for j in range(n - 1, -1, -1): #pui in aux val conform pozitiilor din fr[]
-            cif = 0
-            l = len(lista[j])
-            if l > i:
-                cif = lista[j][i]
+        #punem elementele in aux
+        for j in range(n - 1, -1, -1):
+            cif = (lista[j] >> putereActuala) & (b - 1)
             aux[fr[cif]] = lista[j]
             fr[cif] -= 1
-        #punem val din aux in lista
+        #punem elementele din aux inapoi in lista in ordinea corecta
         for j in range(n):
             lista[j] = aux[j]
-    
-    for i in range(n):
-        lista[i] = transf10(lista[i], p)
-
+        #nu uitam sa crestem p
+        p = p << putere
+        putereActuala += putere
     return lista
-    

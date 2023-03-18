@@ -1,19 +1,20 @@
 import time
 from generate import gen
-from genTesteSpeciale import cresc, descresc, aproapeSortat, apropiat
+from genTesteSpecifice import cresc, descresc, aproapeSortat, apropiat
 from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
 from radixsort import radix
-from radixsort16 import radix16
+from radixsort4 import radix4
 from radixsort8 import radix8
+from radixsort16 import radix16
 from shellsort import shell
 from countsort import count
 
-i = "Speciale2"
+i = "Specifice1"
 g = open("rezultate" + i + ".txt", "w")
-sorts = [radix, radix16, radix8, shell, merge, bucket, count]
-ch_sorts = ["radix", "radix16", "radix8", "shell", "merge", "bucket", "count"]
+sorts = [radix, radix4, radix8, radix16, shell, merge, bucket, count]
+ch_sorts = ["radix", "radix4", "radix8", "radix16", "shell", "merge", "bucket", "count"]
 testeSpeciale = [cresc, descresc, aproapeSortat, apropiat]
 ch_testeSpeciale = ["cresc", "descresc", "aproapeSortat", "apropiat"]
 

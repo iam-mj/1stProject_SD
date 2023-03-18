@@ -4,17 +4,18 @@ from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
 from radixsort import radix
-from radixsort16 import radix16
+from radixsort4 import radix4
 from radixsort8 import radix8
+from radixsort16 import radix16
 from shellsort import shell
 from countsort import count
 
-i = "3"
+i = ""
 f = open("tests.txt")
 g = open("rezultate" + i + ".txt", "w")
 nr_teste = int([x for x in f.readline().split()][2])
-sorts = [radix, radix16, radix8, shell, merge, bucket, count]
-ch_sorts = ["radix", "radix16", "radix8", "shell", "merge", "bucket", "count"]
+sorts = [radix, radix4, radix8, radix16, shell, merge, bucket, count]
+ch_sorts = ["radix", "radix4", "radix8", "radix16", "shell", "merge", "bucket", "count"]
 #teste - lista cu informatii despre testele noastre
 teste = []
 for i in range(nr_teste):

@@ -5,8 +5,9 @@ from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
 from radixsort import radix
-from radixsort16 import radix16
+from radixsort4 import radix4
 from radixsort8 import radix8
+from radixsort16 import radix16
 from shellsort import shell
 
 f = open("tests.txt")
