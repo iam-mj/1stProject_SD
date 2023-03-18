@@ -1,6 +1,6 @@
 import time
 from generate import gen
-from genTesteSpeciale import cresc, descresc, aproapeSortat, apropiat
+from genTesteSpecifice import cresc, descresc, aproapeSortat, apropiat
 from mergesort import merge
 from bucketsort import bucket
 from quicksort import quick
